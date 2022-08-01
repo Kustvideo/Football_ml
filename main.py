@@ -49,8 +49,8 @@ try:
 
     with connection.cursor() as cursor:
         cursor.execute(
-            """SELECT id, nick_name FROM users              
-                WHERE first_name = 'Sasha';
+            """select team_id, team_name, team_country from team
+            limit 5;
                 """
         )
         print(cursor.fetchone())
